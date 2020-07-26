@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">Mi edad canina</string>
     <string name="your_age">Your age</string>
     <string name="calculate">Calculate</string>
-    <string name="instructions">how old would you be if you were a dog?</string>
+    <string name="instructions">How old are you?</string>
     <string name="result_format">If you were a dog you would be %d years old</string>
     <string name="must_insert_age">Must insert an age</string>
 </resources>
