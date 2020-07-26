@@ -22,13 +22,16 @@
         android:text="@string/instructions"/>
 
     <EditText
+        android:id="@+id/age_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="@string/age_in_years" />
+        android:inputType="number"
+        android:hint="@string/your_age" />
 
     <TextView
+        android:id="@+id/result_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -37,13 +40,12 @@
         tools:text="If you were a dog you would be 50 years old"/>
 
     <Button
+        android:id="@+id/calculate_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:hint="@string/age_in_years"
         android:text="@string/calculate" />
 
 </LinearLayout>
