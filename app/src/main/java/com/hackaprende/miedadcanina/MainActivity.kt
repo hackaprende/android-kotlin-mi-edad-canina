@@ -1,24 +1,19 @@
 package com.hackaprende.miedadcanina
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.hackaprende.miedadcanina.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val resultText = findViewById<TextView>(R.id.result_text)
-        val calculateButton = findViewById<Button>(R.id.calculate_button)
-        val ageEdit = findViewById<EditText>(R.id.age_edit)
-
-        calculateButton.setOnClickListener {
-            val ageString = ageEdit.text.toString()
+        binding.calculateButton.setOnClickListener {
+            val ageString = binding.ageEdit.text.toString()
             Log.d("MainActivity", "Age string is: $ageString")
             if (ageString.isEmpty()) {
                 Toast.makeText(this, getString(R.string.must_insert_age),
@@ -26,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 val ageInt = ageString.toInt()
                 val dogAge = ageInt * 7
-                resultText.text = getString(R.string.result_format, dogAge)
+                binding.resultText.text = getString(R.string.result_format, dogAge)
             }
         }
     }
